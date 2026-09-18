@@ -1,0 +1,13 @@
+# Local preview config for Claude Code
+.claude/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Dependencies and logs (for later builds)
+node_modules/
+*.log

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a traditional cook · ChefHive</title>
+  <meta name="description" content="Choose your occasion, food tradition and dishes, see the price instantly, and request a specialist cook for your home.">
+  <link rel="canonical" href="https://chefhive.in/book.html">
+  <meta name="theme-color" content="#c2410c">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/booking.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="ChefHive home"><img src="assets/img/logo.svg" alt="" width="38" height="38"><span class="wordmark">Chef<span>Hive</span></span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html#occasions">Occasions</a></li>
+          <li><a href="index.html#traditions">Traditions</a></li>
+          <li><a href="index.html#menus">Occasion menus</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="partner.html">Join as a cook</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="header-phone" data-contact="phone" href="#"><span data-icon="phone"></span><span data-contact-label></span></a>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span data-icon="menu"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="booking-page">
+    <div class="container">
+      <div id="wizard-view" class="booking-layout">
+        <section aria-labelledby="wizard-title">
+          <div class="wizard-head">
+            <p class="eyebrow">Book a cook</p>
+            <h1 id="wizard-title">Plan your occasion</h1>
+          </div>
+
+          <ol class="progress" id="progress" aria-label="Booking steps"></ol>
+
+          <form id="booking-form" class="card step-panel" novalidate>
+            <!-- 1. Occasion -->
+            <section class="step" data-step="occasion" aria-labelledby="t-occasion">
+              <h2 class="step-title" id="t-occasion" tabindex="-1">What's the occasion?</h2>
+              <p class="step-sub">Each occasion has its own food rules. We match a cook who already knows them.</p>
+              <fieldset class="group">
+                <legend class="sr-only">Occasion</legend>
+                <div class="choice-grid" id="occasion-options"></div>
+              </fieldset>
+              <fieldset class="group" id="festival-group" hidden>
+                <legend>Which festival?</legend>
+                <div class="chips" id="festival-options"></div>
+              </fieldset>
+            </section>
+
+            <!-- 2. Tradition -->
+            <section class="step" data-step="tradition" aria-labelledby="t-tradition" hidden>
+              <h2 class="step-title" id="t-tradition" tabindex="-1">Which food tradition?</h2>
+              <p class="step-sub">Choose the cuisine your family grew up with. Your cook will be a specialist in it.</p>
+              <fieldset class="group">
+                <legend class="sr-only">Food tradition</legend>
+                <div class="choice-grid" id="tradition-options"></div>
+              </fieldset>
+              <fieldset class="group">
+                <legend>Food rules</legend>
+                <div class="chips" id="style-options"></div>
+              </fieldset>
+              <fieldset class="group">
+                <legend>Spice level</legend>
+                <div class="chips" id="spice-options"></div>
+              </fieldset>
+            </section>
+
+            <!-- 3. Menu -->
+            <section class="step" data-step="menu" aria-labelledby="t-menu" hidden>
+              <h2 class="step-title" id="t-menu" tabindex="-1">Pick your menu</h2>
+              <p class="step-sub" id="menu-sub">Choose dishes one by one, or start from an occasion menu.</p>
+              <div class="tabs" role="tablist" aria-label="How to choose your menu">
+                <button type="button" role="tab" id="tab-custom" aria-controls="panel-custom" aria-selected="true">Choose dishes</button>
+                <button type="button" role="tab" id="tab-packages" aria-controls="panel-packages" aria-selected="false" tabindex="-1">Occasion menus</button>
+              </div>
+              <div id="panel-custom" role="tabpanel" aria-labelledby="tab-custom">
+                <div class="dish-toolbar">
+                  <span class="dish-count" id="dish-count" aria-live="polite">0 dishes selected</span>
+                  <span class="small muted" id="dish-hint"></span>
+                  <button type="button" class="btn btn-ghost btn-sm" id="clear-dishes">Clear all</button>
+                </div>
+                <div id="dish-courses"></div>
+              </div>
+              <div id="panel-packages" role="tabpanel" aria-labelledby="tab-packages" hidden>
+                <fieldset class="group">
+                  <legend class="sr-only">Occasion menus</legend>
+                  <div class="pkg-list" id="package-options"></div>
+                </fieldset>
+                <p class="small muted">Picking a menu fills in its dishes. You can still add or remove dishes under "Choose dishes".</p>
+              </div>
+            </section>
+
+            <!-- 4. Details -->
+            <section class="step" data-step="details" aria-labelledby="t-details" hidden>
+              <h2 class="step-title" id="t-details" tabindex="-1">When and where?</h2>
+              <p class="step-sub">Your cook arrives 2–3 hours before the serving time.</p>
+              <div class="form-grid group">
+                <div class="field">
+                  <label for="city">City</label>
+                  <select class="select" id="city" name="city" required><option value="">Choose your city</option></select>
+                </div>
+                <div class="field">
+                  <label for="date">Date</label>
+                  <input class="input" id="date" name="date" type="date" required aria-describedby="date-hint">
+                  <span class="field-hint" id="date-hint"></span>
+                </div>
+              </div>
+              <fieldset class="group">
+                <legend>Meal</legend>
+                <div class="chips" id="meal-options"></div>
+              </fieldset>
+              <div class="form-grid group">
+                <div class="field">
+                  <label for="time">Food ready by</label>
+                  <select class="select" id="time" name="time"></select>
+                </div>
+                <div class="field">
+                  <span class="field-label" id="guests-label">Guests</span>
+                  <div class="stepper" role="group" aria-labelledby="guests-label">
+                    <button type="button" id="guests-minus" aria-label="Fewer guests"><span data-icon="minus"></span></button>
+                    <input id="guests" name="guests" type="number" inputmode="numeric" min="2" max="150" value="10" aria-labelledby="guests-label">
+                    <button type="button" id="guests-plus" aria-label="More guests"><span data-icon="plus"></span></button>
+                  </div>
+                  <span class="field-hint">2 to 150 guests. For more, <a href="index.html#faq">talk to us</a>.</span>
+                </div>
+              </div>
+              <fieldset class="group">
+                <legend>Your kitchen</legend>
+                <p class="group-hint">Helps your cook plan how many dishes can be made at once.</p>
+                <div class="choice-grid cols-3" id="kitchen-options"></div>
+              </fieldset>
+            </section>
+
+            <!-- 5. Cook & extras -->
+            <section class="step" data-step="cook" aria-labelledby="t-cook" hidden>
+              <h2 class="step-title" id="t-cook" tabindex="-1">Choose your cook &amp; extras</h2>
+              <p class="step-sub">We've picked the level that fits your guests and menu. You can change it.</p>
+              <fieldset class="group">
+                <legend>Cook level</legend>
+                <div class="choice-grid cols-3" id="level-options"></div>
+              </fieldset>
+              <fieldset class="group">
+                <legend>Extras</legend>
+                <div class="notice notice-leaf" id="helper-hint" hidden></div>
+                <div class="addon-list" id="addon-list" style="margin-top:12px"></div>
+              </fieldset>
+            </section>
+
+            <!-- 6. Review -->
+            <section class="step" data-step="review" aria-labelledby="t-review" hidden>
+              <h2 class="step-title" id="t-review" tabindex="-1">Review and confirm</h2>
+              <p class="step-sub">Check the details, then tell us where to reach you. Nothing is charged now.</p>
+              <dl class="review-list" id="review-list"></dl>
+              <div class="review-price" id="review-price"></div>
+              <div class="form-grid group">
+                <div class="field">
+                  <label for="name">Your name</label>
+                  <input class="input" id="name" name="name" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="phone">Mobile number</label>
+                  <input class="input" id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="10-digit mobile" required>
+                </div>
+                <div class="field">
+                  <label for="email">Email <span class="muted">(optional)</span></label>
+                  <input class="input" id="email" name="email" type="email" autocomplete="email">
+                </div>
+                <div class="field">
+                  <label for="pincode">Pincode</label>
+                  <input class="input" id="pincode" name="pincode" inputmode="numeric" autocomplete="postal-code" maxlength="6" required>
+                </div>
+                <div class="field span-2">
+                  <label for="address">Address or area</label>
+                  <input class="input" id="address" name="address" autocomplete="street-address" required>
+                </div>
+                <div class="field span-2">
+                  <label for="notes">Family recipes, rituals or allergies <span class="muted">(optional)</span></label>
+                  <textarea class="textarea" id="notes" name="notes" placeholder="e.g. No onion or garlic until after the pooja. Serve on banana leaf. My mother adds jaggery to the sambar."></textarea>
+                </div>
+                <label class="check span-2">
+                  <input type="checkbox" id="consent" name="consent" required>
+                  <span>ChefHive can call or WhatsApp me about this booking.</span>
+                </label>
+              </div>
+            </section>
+
+            <div class="step-error" id="step-error" role="alert"></div>
+
+            <div class="wizard-nav">
+              <button type="button" class="btn btn-secondary" id="btn-back"><span data-icon="arrowLeft"></span>Back</button>
+              <button type="submit" class="btn btn-primary" id="btn-next">Continue <span data-icon="arrowRight"></span></button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="card summary" aria-labelledby="summary-title">
+          <h2 id="summary-title">Your booking</h2>
+          <div id="summary-body"></div>
+        </aside>
+      </div>
+
+      <!-- Shown after a successful request -->
+      <section class="card confirmation" id="confirmation" aria-labelledby="confirm-title" hidden>
+        <span class="hex-icon"><span data-icon="check"></span></span>
+        <h1 id="confirm-title" tabindex="-1">Booking request received</h1>
+        <p class="lead">Your reference number</p>
+        <div class="ref-code" id="confirm-ref"></div>
+        <p id="confirm-summary"></p>
+        <div class="next-steps">
+          <h2 class="h3" style="font-size:1.15rem">What happens next</h2>
+          <ul class="check-list">
+            <li>We call you to confirm the menu and match your specialist cook.</li>
+            <li>You pay the <span data-advance>10%</span> advance to lock the date.</li>
+            <li>Your cook sends the shopping list 2 days before the event.</li>
+          </ul>
+        </div>
+        <p class="notice" id="confirm-demo" hidden><span data-icon="info"></span><span>Demo mode: this request was saved only in this browser. Add a booking endpoint in <code>assets/js/config.js</code> to receive real bookings.</span></p>
+        <div class="confirm-actions">
+          <a class="btn btn-primary" id="confirm-whatsapp" href="#" target="_blank" rel="noopener" hidden><span data-icon="chat"></span>Send details on WhatsApp</a>
+          <a class="btn btn-secondary" href="book.html" id="book-another">Plan another occasion</a>
+          <a class="btn btn-ghost" href="index.html">Back to home</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="mobile-bar" id="mobile-bar">
+      <button type="button" class="btn btn-secondary btn-back" id="mb-back" aria-label="Back"><span data-icon="arrowLeft"></span></button>
+      <div class="total"><small>Estimated cook fee</small><strong id="mb-total">–</strong></div>
+      <button type="button" class="btn btn-primary" id="mb-next">Continue</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="margin-top:0;border-top:0;padding-top:0">
+        <span>© <span data-year>2026</span> ChefHive · <a href="index.html">Home</a> · <a href="partner.html">Join as a cook</a></span>
+        <a data-contact="email" href="#"><span data-contact-label></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/menus.js" defer></script>
+  <script src="assets/js/common.js" defer></script>
+  <script src="assets/js/booking-view.js" defer></script>
+  <script src="assets/js/booking.js" defer></script>
+</body>
+</html>
