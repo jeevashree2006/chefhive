@@ -1,0 +1,214 @@
+/* Booking wizard (book.html) and cook sign-up form (partner.html). */
+
+.booking-page { padding-block: 28px 64px; }
+.booking-layout { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 32px; align-items: start; }
+.wizard-head { margin-bottom: 20px; }
+.wizard-head h1 { font-size: clamp(1.8rem, 3.2vw, 2.5rem); margin-bottom: 4px; }
+
+/* ---------- Progress ---------- */
+.progress { display: flex; gap: 6px; list-style: none; margin: 0 0 20px; padding: 0; }
+.progress li { flex: 1; min-width: 0; }
+.progress button {
+  width: 100%; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; padding: 0; border: 0; background: none;
+  font-size: 0.78rem; font-weight: 700; color: var(--muted); text-align: left; cursor: pointer;
+}
+.progress button::before { content: ''; display: block; width: 100%; height: 6px; border-radius: 99px; background: var(--line); transition: background-color 0.2s; }
+.progress .is-done button::before { background: var(--leaf); }
+.progress .is-current button { color: var(--ink); }
+.progress .is-current button::before { background: var(--brand); }
+.progress button:disabled { cursor: default; }
+.progress .label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+@media (max-width: 700px) {
+  .progress .label { display: none; }
+  .progress .is-current .label { display: block; overflow: visible; }
+}
+
+/* ---------- Step panel ---------- */
+.step-panel { padding: clamp(20px, 3vw, 32px); }
+.step-title { font-size: clamp(1.45rem, 2.6vw, 1.95rem); margin-bottom: 6px; }
+.step-title:focus { outline: none; }
+.step-sub { color: var(--ink-2); margin-bottom: 22px; }
+.group { border: 0; margin: 0 0 26px; padding: 0; min-width: 0; }
+.group:last-child { margin-bottom: 0; }
+.group > legend, .group-label { display: block; padding: 0; margin-bottom: 12px; font-weight: 800; font-size: 1rem; }
+.group-hint { margin: -6px 0 12px; font-size: 0.86rem; color: var(--muted); }
+
+/* Choice cards: radio/checkbox inputs covering a styled card. */
+.choice-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.choice-grid.cols-3 { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.choice { position: relative; }
+.choice > input { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.choice > input:disabled { cursor: not-allowed; }
+.choice-body {
+  position: relative; display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 16px;
+  border: 1.5px solid var(--line); border-radius: 14px; background: var(--surface);
+  transition: border-color 0.15s, background-color 0.15s, box-shadow 0.15s;
+}
+.choice > input:hover + .choice-body { border-color: var(--honey); }
+.choice > input:checked + .choice-body { border-color: var(--brand); background: var(--brand-50); box-shadow: inset 0 0 0 1px var(--brand); }
+.choice > input:focus-visible + .choice-body { outline: 3px solid var(--honey); outline-offset: 2px; }
+.choice > input:disabled + .choice-body { opacity: 0.5; }
+.choice > input:checked + .choice-body::after {
+  content: ''; position: absolute; top: 10px; right: 10px; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--brand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 13px no-repeat;
+}
+.choice-body > span { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.choice-title { display: flex; align-items: center; gap: 10px; padding-right: 24px; font-weight: 800; line-height: 1.3; }
+.choice-desc { font-size: 0.86rem; color: var(--ink-2); }
+.choice-meta { font-size: 0.78rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.choice .hex-icon { width: 38px; height: 42px; }
+.choice .hex-icon .icon { width: 20px; height: 20px; }
+.choice-accent .choice-body { border-left: 5px solid var(--accent, var(--brand)); }
+
+/* ---------- Menu step ---------- */
+.tabs { display: inline-flex; gap: 4px; padding: 4px; margin-bottom: 18px; border-radius: 999px; background: var(--surface-2); }
+.tabs button { min-height: 42px; padding: 8px 18px; border: 0; border-radius: 999px; background: none; font-weight: 700; color: var(--ink-2); cursor: pointer; }
+.tabs button[aria-selected='true'] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow-sm); }
+
+.dish-toolbar {
+  position: sticky; top: calc(var(--header-h) + 4px); z-index: 5; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between;
+  margin: 0 -8px 16px; padding: 10px 8px; background: var(--surface); border-radius: 12px; box-shadow: 0 10px 14px -14px rgba(66, 38, 10, 0.45);
+}
+@media (max-width: 640px) {
+  .dish-toolbar { flex-wrap: nowrap; }
+  .dish-toolbar #dish-hint { display: none; }
+}
+.dish-count { font-weight: 800; }
+.dish-count.is-over { color: var(--danger); }
+.course { margin-bottom: 22px; }
+.course h3 { margin-bottom: 10px; font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.dish-list { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.dish { position: relative; }
+.dish input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.dish span {
+  display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 10px 12px; border: 1.5px solid var(--line);
+  border-radius: 12px; background: var(--surface); font-weight: 600; font-size: 0.92rem; line-height: 1.3; transition: border-color 0.15s, background-color 0.15s;
+}
+.dish span::before { content: ''; flex: none; width: 18px; height: 18px; border: 1.5px solid #cdb89c; border-radius: 5px; background: #fff; }
+.dish input:hover + span { border-color: var(--leaf); }
+.dish input:checked + span { border-color: var(--leaf); background: var(--leaf-50); }
+.dish input:checked + span::before {
+  border-color: var(--leaf);
+  background: var(--leaf) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 12px no-repeat;
+}
+.dish input:focus-visible + span { outline: 3px solid var(--honey); outline-offset: 2px; }
+/* Indian veg / non-veg marks */
+.diet { flex: none; display: inline-grid; place-items: center; width: 14px; height: 14px; margin-left: auto; border: 1.5px solid currentColor; border-radius: 2px; }
+.diet::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.diet.veg { color: #1a7f37; }
+.diet.nonveg { color: #b42318; }
+.diet.nonveg::after { border-radius: 0; width: 0; height: 0; background: none; border-left: 4px solid transparent; border-right: 4px solid transparent; border-bottom: 7px solid currentColor; }
+
+.pkg-list { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.pkg-option .choice-body { flex-direction: row; align-items: center; gap: 14px; }
+.pkg-option img { flex: none; width: 76px; height: 76px; border-radius: 12px; object-fit: cover; }
+.pkg-option .choice-title { padding-right: 18px; }
+
+/* ---------- Details step ---------- */
+.stepper { display: inline-flex; align-items: center; border: 1.5px solid var(--line); border-radius: 999px; background: var(--surface); }
+.stepper:focus-within { border-color: var(--brand); box-shadow: 0 0 0 4px rgba(194, 65, 12, 0.14); }
+.stepper button { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: none; color: var(--ink); cursor: pointer; }
+.stepper button:hover { background: var(--brand-50); color: var(--brand); }
+.stepper button:disabled { opacity: 0.35; cursor: not-allowed; background: none; }
+.stepper input { width: 64px; border: 0; background: none; text-align: center; font-weight: 800; font-size: 1.05rem; -moz-appearance: textfield; appearance: textfield; }
+.stepper input:focus { outline: none; }
+.stepper input::-webkit-outer-spin-button, .stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* ---------- Cook & extras step ---------- */
+.level-choice .price { font-family: var(--font-display); font-size: 1.45rem; font-weight: 700; line-height: 1.1; }
+.level-choice .reason { font-size: 0.82rem; font-weight: 700; color: var(--danger); }
+.level-choice .badge { align-self: flex-start; }
+.addon-list { display: grid; gap: 10px; }
+.addon { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center; justify-content: space-between; padding: 14px 16px; border: 1.5px solid var(--line); border-radius: 14px; background: var(--surface); }
+.addon.is-on { border-color: var(--leaf); background: var(--leaf-50); }
+.addon-info { flex: 1 1 260px; min-width: 0; }
+.addon-info strong { display: block; }
+.addon-info span { font-size: 0.86rem; color: var(--ink-2); }
+.addon-control { display: flex; align-items: center; gap: 14px; }
+.addon-price { font-weight: 800; font-size: 0.9rem; white-space: nowrap; }
+.addon-price small { font-weight: 600; color: var(--muted); }
+.switch { position: relative; display: inline-flex; width: 52px; height: 30px; flex: none; }
+.switch input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; z-index: 1; }
+.switch span { position: absolute; inset: 0; border-radius: 99px; background: #d9c8b0; transition: background-color 0.2s; }
+.switch span::after { content: ''; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); transition: transform 0.2s; }
+.switch input:checked + span { background: var(--leaf); }
+.switch input:checked + span::after { transform: translateX(22px); }
+.switch input:focus-visible + span { outline: 3px solid var(--honey); outline-offset: 2px; }
+
+/* ---------- Review step ---------- */
+.review-list { margin: 0 0 24px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.review-row { display: grid; grid-template-columns: 140px minmax(0, 1fr) auto; gap: 12px; align-items: start; padding: 14px 16px; border-bottom: 1px solid var(--line); background: var(--surface); }
+.review-row:last-child { border-bottom: 0; }
+.review-row dt { font-weight: 700; font-size: 0.88rem; color: var(--muted); }
+.review-row dd { margin: 0; }
+.review-row .btn { min-height: 34px; padding: 4px 10px; font-size: 0.85rem; }
+@media (max-width: 560px) {
+  .review-row { grid-template-columns: minmax(0, 1fr) auto; }
+  .review-row .review-value { grid-column: 1 / -1; grid-row: 2; }
+}
+.review-price { margin-bottom: 24px; padding: 18px; border-radius: 14px; background: var(--surface-2); }
+.review-price .price-lines { border-top: 0; padding-top: 0; }
+
+/* ---------- Nav + errors ---------- */
+.wizard-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); }
+.wizard-nav .btn-primary { margin-left: auto; }
+.step-error:empty { display: none; }
+.step-error { margin-top: 16px; padding: 12px 14px; border-radius: 12px; background: #fdecea; color: var(--danger); font-weight: 700; font-size: 0.92rem; }
+
+/* ---------- Summary ---------- */
+.summary { position: sticky; top: calc(var(--header-h) + 16px); padding: 22px; }
+.summary h2 { font-size: 1.3rem; margin-bottom: 14px; }
+.summary-list { display: grid; gap: 10px; margin: 0 0 16px; }
+.summary-list div { display: flex; justify-content: space-between; gap: 12px; font-size: 0.9rem; }
+.summary-list dt { color: var(--muted); flex: none; }
+.summary-list dd { margin: 0; font-weight: 700; text-align: right; min-width: 0; overflow-wrap: anywhere; }
+.price-lines { display: grid; gap: 9px; padding-top: 12px; border-top: 1px dashed var(--line); font-size: 0.9rem; }
+.price-line { display: flex; justify-content: space-between; gap: 12px; }
+.price-line small { display: block; font-size: 0.78rem; color: var(--muted); }
+.price-line > span:last-child { font-weight: 700; white-space: nowrap; }
+.price-total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 12px; padding-top: 12px; border-top: 2px solid var(--ink); font-weight: 800; }
+.price-total strong { font-family: var(--font-display); font-size: 1.6rem; }
+.advance-line { margin: 8px 0 0; font-size: 0.88rem; font-weight: 700; color: var(--leaf); }
+.summary-note { margin: 12px 0 0; font-size: 0.8rem; color: var(--muted); }
+.summary .notice { margin-top: 14px; }
+
+/* ---------- Mobile price bar ---------- */
+.mobile-bar { display: none; }
+@media (max-width: 960px) {
+  .booking-page { padding-bottom: 110px; }
+  .booking-layout { grid-template-columns: 1fr; }
+  .summary { display: none; }
+  .wizard-nav { display: none; }
+  .mobile-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; align-items: center; gap: 10px;
+    padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom)); background: var(--surface);
+    border-top: 1px solid var(--line); box-shadow: 0 -10px 24px -14px rgba(66, 38, 10, 0.35);
+  }
+  .mobile-bar .total { flex: 1; min-width: 0; line-height: 1.2; }
+  .mobile-bar .total small { display: block; font-size: 0.75rem; color: var(--muted); }
+  .mobile-bar .total strong { font-family: var(--font-display); font-size: 1.3rem; }
+  .mobile-bar .btn-back { width: 48px; padding: 0; flex: none; }
+}
+
+/* ---------- Confirmation ---------- */
+.confirmation { max-width: 720px; margin: 8px auto 0; padding: clamp(24px, 4vw, 44px); text-align: center; }
+.confirmation h1, .confirmation h2:first-of-type { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+.confirmation .hex-icon { width: 76px; height: 84px; margin: 0 auto 18px; background: var(--leaf-50); color: var(--leaf); }
+.confirmation .hex-icon .icon { width: 36px; height: 36px; }
+.ref-code { display: inline-block; margin: 4px 0 18px; padding: 8px 16px; border-radius: 10px; background: var(--honey-100); font-family: ui-monospace, Consolas, monospace; font-size: 1.3rem; font-weight: 800; letter-spacing: 0.08em; }
+.next-steps { margin: 20px 0 28px; text-align: left; }
+.confirmation .notice { text-align: left; margin-bottom: 20px; }
+.confirm-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+/* ---------- Cook sign-up page ---------- */
+.partner-layout { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+.partner-aside { position: sticky; top: calc(var(--header-h) + 20px); }
+.partner-aside figure { margin: 24px 0 0; border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--surface-2); }
+.partner-aside img { width: 100%; height: 100%; object-fit: cover; }
+.partner-form { padding: clamp(20px, 3vw, 32px); }
+.partner-form h2 { font-size: 1.35rem; margin: 8px 0 14px; }
+.partner-form .group { margin-bottom: 22px; }
+@media (max-width: 900px) {
+  .partner-layout { grid-template-columns: 1fr; }
+  .partner-aside { position: static; }
+}

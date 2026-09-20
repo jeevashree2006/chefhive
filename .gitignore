@@ -1,3 +1,13 @@
+# Secrets
+.env
+.env.local
+*.env
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+
 # Local preview config for Claude Code
 .claude/
 
@@ -7,7 +17,4 @@ Thumbs.db
 desktop.ini
 .vscode/
 .idea/
-
-# Dependencies and logs (for later builds)
-node_modules/
 *.log

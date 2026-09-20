@@ -1,0 +1,3069 @@
+{
+  "settings": {
+    "cities": [
+      "Bengaluru",
+      "Chennai",
+      "Hyderabad",
+      "Kochi",
+      "Coimbatore",
+      "Mumbai",
+      "Pune",
+      "Delhi NCR"
+    ],
+    "minNoticeDays": 2,
+    "maxAdvanceDays": 120,
+    "advancePercent": 10
+  },
+  "occasions": [
+    {
+      "id": "pooja",
+      "name": "Pooja & homam",
+      "icon": "diya",
+      "desc": "Satvik, no onion-garlic menus and naivedyam made the traditional way."
+    },
+    {
+      "id": "griha-pravesh",
+      "name": "Griha pravesh",
+      "icon": "home",
+      "desc": "Housewarming lunch for family and priests, served in the right order."
+    },
+    {
+      "id": "festival",
+      "name": "Festival feast",
+      "icon": "sparkles",
+      "desc": "Onam, Pongal, Ugadi, Ganesh Chaturthi, Durga Puja, Diwali, Eid, Christmas."
+    },
+    {
+      "id": "naming",
+      "name": "Naming & baby ceremonies",
+      "icon": "baby",
+      "desc": "Namakaran, annaprashan, seemantham, godh bharai."
+    },
+    {
+      "id": "birthday",
+      "name": "Birthday & anniversary",
+      "icon": "cake",
+      "desc": "A family-style feast at home instead of another restaurant order."
+    },
+    {
+      "id": "gathering",
+      "name": "Family get-together",
+      "icon": "users",
+      "desc": "Relatives visiting? Cook the dishes everyone grew up with."
+    },
+    {
+      "id": "remembrance",
+      "name": "Remembrance rituals",
+      "icon": "lotus",
+      "desc": "Shraddh, tithi and annual ceremonies with the prescribed food."
+    },
+    {
+      "id": "other",
+      "name": "Something else",
+      "icon": "dots",
+      "desc": "Tell us about it and we will find the right cook."
+    }
+  ],
+  "festivals": [
+    "Onam",
+    "Pongal / Sankranti",
+    "Ugadi / Gudi Padwa",
+    "Vishu",
+    "Ganesh Chaturthi",
+    "Navratri / Durga Puja",
+    "Diwali",
+    "Eid",
+    "Christmas",
+    "Holi",
+    "Raksha Bandhan",
+    "Other"
+  ],
+  "foodStyles": [
+    {
+      "id": "veg",
+      "name": "Vegetarian"
+    },
+    {
+      "id": "nonveg",
+      "name": "Non-vegetarian"
+    },
+    {
+      "id": "satvik",
+      "name": "Satvik (no onion, no garlic)"
+    },
+    {
+      "id": "jain",
+      "name": "Jain (no root vegetables)"
+    }
+  ],
+  "spiceLevels": [
+    {
+      "id": "mild",
+      "name": "Mild"
+    },
+    {
+      "id": "medium",
+      "name": "Medium"
+    },
+    {
+      "id": "hot",
+      "name": "Traditional heat"
+    }
+  ],
+  "meals": [
+    {
+      "id": "breakfast",
+      "name": "Breakfast",
+      "from": "07:00",
+      "to": "10:30"
+    },
+    {
+      "id": "lunch",
+      "name": "Lunch",
+      "from": "11:30",
+      "to": "15:00"
+    },
+    {
+      "id": "snacks",
+      "name": "Evening snacks",
+      "from": "16:00",
+      "to": "18:30"
+    },
+    {
+      "id": "dinner",
+      "name": "Dinner",
+      "from": "19:00",
+      "to": "22:00"
+    }
+  ],
+  "kitchens": [
+    {
+      "id": "basic",
+      "name": "Basic",
+      "desc": "2 burners, small counter",
+      "comfortableDishes": 6
+    },
+    {
+      "id": "standard",
+      "name": "Standard",
+      "desc": "3–4 burners, mixer, fridge",
+      "comfortableDishes": 12
+    },
+    {
+      "id": "large",
+      "name": "Large",
+      "desc": "Big vessels, lots of counter space",
+      "comfortableDishes": 24
+    }
+  ],
+  "levels": [
+    {
+      "id": "home",
+      "name": "Home Cook",
+      "tagline": "Homestyle food for small family meals",
+      "base": 1499,
+      "includedGuests": 6,
+      "includedDishes": 5,
+      "perGuest": 60,
+      "perDish": 150,
+      "maxGuests": 15,
+      "maxDishes": 8,
+      "points": [
+        "Everyday dishes from one region",
+        "Up to 15 guests",
+        "Cleans the cooking area after"
+      ]
+    },
+    {
+      "id": "specialist",
+      "name": "Tradition Specialist",
+      "tagline": "Grew up cooking your cuisine for festivals and poojas",
+      "base": 2999,
+      "includedGuests": 12,
+      "includedDishes": 8,
+      "perGuest": 70,
+      "perDish": 200,
+      "maxGuests": 40,
+      "maxDishes": 16,
+      "popular": true,
+      "points": [
+        "Knows ritual rules: satvik, Jain, naivedyam",
+        "Serves in the traditional order",
+        "Up to 40 guests"
+      ]
+    },
+    {
+      "id": "master",
+      "name": "Master Cook",
+      "tagline": "Runs full feasts and large functions with a team",
+      "base": 5999,
+      "includedGuests": 30,
+      "includedDishes": 12,
+      "perGuest": 60,
+      "perDish": 250,
+      "maxGuests": 150,
+      "maxDishes": 28,
+      "points": [
+        "15+ years of wedding and temple-style feasts",
+        "Plans quantities for big crowds",
+        "Up to 150 guests"
+      ]
+    }
+  ],
+  "addons": [
+    {
+      "id": "helper",
+      "name": "Kitchen helper",
+      "desc": "Chopping, grinding and washing up while the cook cooks.",
+      "price": 799,
+      "unit": "per helper",
+      "max": 4
+    },
+    {
+      "id": "server",
+      "name": "Serving staff",
+      "desc": "Serves your guests, leaf or thali style, in the traditional order.",
+      "price": 999,
+      "unit": "per person",
+      "max": 6
+    },
+    {
+      "id": "shopping",
+      "name": "We buy the ingredients",
+      "desc": "We shop fresh that morning. Ingredients billed at actual cost.",
+      "price": 499,
+      "unit": "flat fee"
+    },
+    {
+      "id": "leaves",
+      "name": "Banana leaves / leaf plates",
+      "desc": "Banana leaves or patravali for traditional serving.",
+      "perGuest": 20,
+      "unit": "per guest"
+    },
+    {
+      "id": "cleaning",
+      "name": "After-meal cleaning",
+      "desc": "Dishes and dining area cleaned after your guests leave.",
+      "price": 699,
+      "unit": "flat fee"
+    }
+  ],
+  "guestsPerHelper": 20,
+  "packages": [
+    {
+      "id": "onam-sadhya",
+      "name": "Onam Sadhya",
+      "tradition": "kerala",
+      "occasion": "festival",
+      "festival": "Onam",
+      "style": "veg",
+      "level": "master",
+      "minGuests": 15,
+      "image": "photo-1788619378696-c77352c43a88",
+      "blurb": "The full leaf: 20 dishes served on banana leaf in the traditional order, ending with two payasams.",
+      "dishes": [
+        "kl-upperi",
+        "kl-sharkara",
+        "kl-pappadam",
+        "kl-mangapickle",
+        "kl-injipuli",
+        "kl-pachadi",
+        "kl-kichadi",
+        "kl-thoran",
+        "kl-avial",
+        "kl-olan",
+        "kl-kalan",
+        "kl-erissery",
+        "kl-kootu",
+        "kl-sambar",
+        "kl-pulissery",
+        "kl-rasam",
+        "kl-moru",
+        "kl-matta",
+        "kl-adapradhaman",
+        "kl-palada"
+      ]
+    },
+    {
+      "id": "pooja-satvik",
+      "name": "Pooja Satvik Lunch",
+      "tradition": "tamil",
+      "occasion": "pooja",
+      "style": "satvik",
+      "level": "specialist",
+      "minGuests": 10,
+      "image": "photo-1642240231842-65462fedb8de",
+      "blurb": "No onion, no garlic. Vadai, sambar, rasam, kootu and sakkarai pongal, fit for naivedyam.",
+      "dishes": [
+        "tn-medhuvadai",
+        "tn-sambar",
+        "tn-rasam",
+        "tn-poriyal",
+        "tn-kootu",
+        "tn-morkuzhambu",
+        "tn-rice",
+        "tn-puliyodarai",
+        "tn-curdrice",
+        "tn-appalam",
+        "tn-pachadi",
+        "tn-sakkaraipongal",
+        "tn-payasam"
+      ]
+    },
+    {
+      "id": "griha-pravesh-udupi",
+      "name": "Griha Pravesh Lunch",
+      "tradition": "udupi",
+      "occasion": "griha-pravesh",
+      "style": "satvik",
+      "level": "specialist",
+      "minGuests": 12,
+      "image": "photo-1742281258189-3b933879867a",
+      "blurb": "Udupi temple-style meal for the housewarming: kosambari, gojju, saaru and holige.",
+      "dishes": [
+        "ud-kosambari",
+        "ud-happala",
+        "ud-palya",
+        "ud-gojju",
+        "ud-sambar",
+        "ud-saaru",
+        "ud-majjigehuli",
+        "ud-rice",
+        "ud-chitranna",
+        "ud-payasa",
+        "ud-holige",
+        "ud-majjige"
+      ]
+    },
+    {
+      "id": "ganesh-naivedya",
+      "name": "Ganesh Chaturthi Naivedya",
+      "tradition": "maharashtrian",
+      "occasion": "festival",
+      "festival": "Ganesh Chaturthi",
+      "style": "satvik",
+      "level": "specialist",
+      "minGuests": 10,
+      "image": "photo-1631743527335-f15e4a4fa196",
+      "blurb": "Ukadiche modak, puran poli and varan bhaat, the way Ganeshotsav is served at home.",
+      "dishes": [
+        "mh-modak",
+        "mh-puranpoli",
+        "mh-varan",
+        "mh-rice",
+        "mh-masalebhaat",
+        "mh-batatabhaji",
+        "mh-bharlivangi",
+        "mh-amti",
+        "mh-koshimbir",
+        "mh-kothimbir",
+        "mh-poli",
+        "mh-papad"
+      ]
+    },
+    {
+      "id": "eid-dawat",
+      "name": "Eid Dawat",
+      "tradition": "hyderabadi",
+      "occasion": "festival",
+      "festival": "Eid",
+      "style": "nonveg",
+      "level": "specialist",
+      "minGuests": 15,
+      "image": "photo-1633945274405-b6c8069047b0",
+      "blurb": "Mutton dum biryani, mirchi ka salan, shikampuri kebabs and sheer khurma.",
+      "dishes": [
+        "hy-shikampuri",
+        "hy-muttonbiryani",
+        "hy-mirchisalan",
+        "hy-bagarabaingan",
+        "hy-korma",
+        "hy-raita",
+        "hy-sheermal",
+        "hy-salad",
+        "hy-doublekameetha",
+        "hy-sheerkhurma"
+      ]
+    },
+    {
+      "id": "rajasthani-thali",
+      "name": "Rajasthani Festive Thali",
+      "tradition": "rajasthani",
+      "occasion": "gathering",
+      "style": "veg",
+      "level": "specialist",
+      "minGuests": 12,
+      "image": "photo-1589778655375-3e622a9fc91c",
+      "blurb": "Dal baati churma, gatte, ker sangri and bajra roti, cooked in real ghee.",
+      "dishes": [
+        "rj-dalkachori",
+        "rj-dal",
+        "rj-baati",
+        "rj-churma",
+        "rj-gatte",
+        "rj-kersangri",
+        "rj-kadhi",
+        "rj-bajraroti",
+        "rj-lehsunchutney",
+        "rj-raita",
+        "rj-moongdalhalwa"
+      ]
+    },
+    {
+      "id": "diwali-feast",
+      "name": "Diwali Family Feast",
+      "tradition": "punjabi",
+      "occasion": "festival",
+      "festival": "Diwali",
+      "style": "veg",
+      "level": "specialist",
+      "minGuests": 12,
+      "image": "photo-1695568181363-af5c78f4d059",
+      "blurb": "Paneer tikka, dal makhani, chole and lachha paratha, with gulab jamun and kheer.",
+      "dishes": [
+        "pb-paneertikka",
+        "pb-dalmakhani",
+        "pb-shahipaneer",
+        "pb-chole",
+        "pb-lachha",
+        "pb-jeera",
+        "pb-raita",
+        "pb-salad",
+        "pb-gulabjamun",
+        "pb-kheer"
+      ]
+    },
+    {
+      "id": "chettinad-feast",
+      "name": "Chettinad Sunday Feast",
+      "tradition": "chettinad",
+      "occasion": "gathering",
+      "style": "nonveg",
+      "level": "specialist",
+      "minGuests": 10,
+      "image": "photo-1596797038530-2c107229654b",
+      "blurb": "Pepper chicken, mutton kuzhambu and Chettinad biryani, with paal paniyaram to finish.",
+      "dishes": [
+        "ch-pepperchicken",
+        "ch-muttonkuzhambu",
+        "ch-biryani",
+        "ch-karakuzhambu",
+        "ch-ennaikathirikai",
+        "ch-rice",
+        "ch-rasam",
+        "ch-appalam",
+        "ch-thayir",
+        "ch-paalpaniyaram"
+      ]
+    },
+    {
+      "id": "gujarati-thali",
+      "name": "Gujarati Thali & Farsan",
+      "tradition": "gujarati",
+      "occasion": "naming",
+      "style": "veg",
+      "level": "specialist",
+      "minGuests": 12,
+      "image": "photo-1714799263291-272975db795a",
+      "blurb": "Dhokla and khandvi to start, undhiyu and kadhi at the centre, shrikhand to end.",
+      "dishes": [
+        "gj-dhokla",
+        "gj-khandvi",
+        "gj-undhiyu",
+        "gj-kadhi",
+        "gj-dal",
+        "gj-sevtameta",
+        "gj-rotli",
+        "gj-puri",
+        "gj-rice",
+        "gj-chhundo",
+        "gj-papad",
+        "gj-shrikhand"
+      ]
+    }
+  ],
+  "images": {
+    "hero": "photo-1625398407796-82650a8c135f",
+    "heroSide1": "photo-1680359873864-43e89bf248ac",
+    "heroSide2": "photo-1667670651830-2d5bcd0e4f8f",
+    "usp": "photo-1728910156510-77488f19b152",
+    "partner": "photo-1742281257707-0c7f7e5ca9c6"
+  },
+  "courses": [
+    {
+      "id": "S",
+      "name": "Starters & snacks"
+    },
+    {
+      "id": "M",
+      "name": "Curries & mains"
+    },
+    {
+      "id": "R",
+      "name": "Rice & breads"
+    },
+    {
+      "id": "A",
+      "name": "Sides & accompaniments"
+    },
+    {
+      "id": "D",
+      "name": "Sweets"
+    }
+  ],
+  "traditions": [
+    {
+      "id": "kerala",
+      "name": "Kerala",
+      "region": "Kerala · Malabar",
+      "accent": "#2F6B3A",
+      "signature": "Sadhya · Avial · Ada pradhaman",
+      "blurb": "Sadhya on banana leaf, coconut-rich curries and Syrian Christian and Malabar specialities.",
+      "dishes": [
+        {
+          "id": "kl-upperi",
+          "name": "Banana chips (upperi)",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-sharkara",
+          "name": "Sharkara varatti",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-pazhampori",
+          "name": "Pazham pori",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-parippuvada",
+          "name": "Parippu vada",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": false
+        },
+        {
+          "id": "kl-chickenfry",
+          "name": "Kerala chicken fry",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-sambar",
+          "name": "Sambar",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-avial",
+          "name": "Avial",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "kl-olan",
+          "name": "Olan",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-kalan",
+          "name": "Kalan",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "kl-erissery",
+          "name": "Erissery",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-thoran",
+          "name": "Cabbage thoran",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-kootu",
+          "name": "Kootu curry",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "kl-pulissery",
+          "name": "Pulissery",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-pachadi",
+          "name": "Beetroot pachadi",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "kl-kichadi",
+          "name": "Cucumber kichadi",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-meencurry",
+          "name": "Kerala fish curry",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-stew",
+          "name": "Chicken stew",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-duckroast",
+          "name": "Duck roast",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-karimeen",
+          "name": "Karimeen pollichathu",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-matta",
+          "name": "Kerala matta rice",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-appam",
+          "name": "Appam",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-idiyappam",
+          "name": "Idiyappam",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-parotta",
+          "name": "Malabar parotta",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-rasam",
+          "name": "Rasam",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-injipuli",
+          "name": "Inji puli",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-mangapickle",
+          "name": "Mango pickle",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-pappadam",
+          "name": "Pappadam",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-moru",
+          "name": "Sambharam (spiced buttermilk)",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-adapradhaman",
+          "name": "Ada pradhaman",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-palada",
+          "name": "Palada payasam",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "kl-parippupayasam",
+          "name": "Parippu payasam",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    },
+    {
+      "id": "chettinad",
+      "name": "Chettinad",
+      "region": "Tamil Nadu",
+      "accent": "#9A3412",
+      "signature": "Pepper chicken · Kara kuzhambu · Paniyaram",
+      "blurb": "Bold, freshly ground spice blends from Karaikudi, and some of Tamil Nadu's best vegetarian gravies.",
+      "dishes": [
+        {
+          "id": "ch-pepperchicken",
+          "name": "Pepper chicken (milagu varuval)",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-muttonchukka",
+          "name": "Mutton chukka",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-kuzhipaniyaram",
+          "name": "Kara kuzhi paniyaram",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-vazhakkai",
+          "name": "Raw banana fry",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-chickencurry",
+          "name": "Chettinad chicken curry",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-muttonkuzhambu",
+          "name": "Mutton kuzhambu",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-nandu",
+          "name": "Nandu (crab) masala",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-karakuzhambu",
+          "name": "Kara kuzhambu",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": false
+        },
+        {
+          "id": "ch-vendakkai",
+          "name": "Vendakkai mandi",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-ennaikathirikai",
+          "name": "Ennai kathirikai",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-kurma",
+          "name": "Vegetable kurma",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "ch-biryani",
+          "name": "Chettinad chicken biryani",
+          "course": "R",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-vegbiryani",
+          "name": "Seeraga samba veg biryani",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": true
+        },
+        {
+          "id": "ch-rice",
+          "name": "Steamed rice",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-idiyappam",
+          "name": "Idiyappam",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-kaldosai",
+          "name": "Kal dosai",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-rasam",
+          "name": "Milagu rasam",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-appalam",
+          "name": "Appalam",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-kosumalli",
+          "name": "Kosumalli",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-thayir",
+          "name": "Thayir pachadi",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-paalpaniyaram",
+          "name": "Paal paniyaram",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-kavuni",
+          "name": "Kavuni arisi",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ch-adhirasam",
+          "name": "Adhirasam",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    },
+    {
+      "id": "tamil",
+      "name": "Tamil Traditional",
+      "region": "Tamil Nadu",
+      "accent": "#B45309",
+      "signature": "Sambar · Poriyal · Sakkarai pongal",
+      "blurb": "Festival and temple-style vegetarian cooking: the full elai saapadu with vadai and payasam.",
+      "dishes": [
+        {
+          "id": "tn-medhuvadai",
+          "name": "Medu vadai",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-masalavadai",
+          "name": "Masala vadai",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": false
+        },
+        {
+          "id": "tn-sundal",
+          "name": "Kondakadalai sundal",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-bajji",
+          "name": "Vazhakkai bajji",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-sambar",
+          "name": "Sambar",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-morkuzhambu",
+          "name": "Mor kuzhambu",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-vathakuzhambu",
+          "name": "Vatha kuzhambu",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-poriyal",
+          "name": "Beans poriyal",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-kootu",
+          "name": "Pooshanikai kootu",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-avial",
+          "name": "Avial",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "tn-usili",
+          "name": "Paruppu usili",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-urulai",
+          "name": "Urulai roast",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "tn-rice",
+          "name": "Rice with paruppu & ghee",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-puliyodarai",
+          "name": "Puliyodarai",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-lemonrice",
+          "name": "Lemon rice",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-curdrice",
+          "name": "Curd rice",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-venpongal",
+          "name": "Ven pongal",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-rasam",
+          "name": "Rasam",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-appalam",
+          "name": "Appalam",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-pachadi",
+          "name": "Manga pachadi",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-pickle",
+          "name": "Narthangai pickle",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-sakkaraipongal",
+          "name": "Sakkarai pongal",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-payasam",
+          "name": "Semiya payasam",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-kesari",
+          "name": "Rava kesari",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "tn-paruppupayasam",
+          "name": "Paruppu payasam",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    },
+    {
+      "id": "udupi",
+      "name": "Udupi & Mangalorean",
+      "region": "Coastal Karnataka",
+      "accent": "#0F766E",
+      "signature": "Saaru · Gojju · Neer dosa · Ghee roast",
+      "blurb": "Temple-town vegetarian cooking from Udupi, plus Mangalore's coconut curries and ghee roasts.",
+      "dishes": [
+        {
+          "id": "ud-golibaje",
+          "name": "Goli baje",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-buns",
+          "name": "Mangalore buns",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-gheeroast",
+          "name": "Chicken ghee roast",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-fishfry",
+          "name": "Rava fish fry",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-sambar",
+          "name": "Udupi sambar",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-saaru",
+          "name": "Tomato saaru",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-majjigehuli",
+          "name": "Majjige huli",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-gojju",
+          "name": "Pineapple gojju",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-palya",
+          "name": "Beans palya",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-manoli",
+          "name": "Kadale manoli",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-korigassi",
+          "name": "Kori gassi",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-meengassi",
+          "name": "Meen gassi",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-neerdosa",
+          "name": "Neer dosa",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-chitranna",
+          "name": "Chitranna",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-bisibele",
+          "name": "Bisi bele bath",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "ud-rice",
+          "name": "Steamed rice",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-kottekadubu",
+          "name": "Kotte kadubu",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-korirotti",
+          "name": "Kori rotti",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-kosambari",
+          "name": "Kosambari",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-happala",
+          "name": "Happala",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-chutney",
+          "name": "Coconut chutney",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-majjige",
+          "name": "Neer majjige",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-payasa",
+          "name": "Godhi payasa",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-holige",
+          "name": "Holige",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-kesaribath",
+          "name": "Kesari bath",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ud-mysorepak",
+          "name": "Mysore pak",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    },
+    {
+      "id": "andhra",
+      "name": "Andhra & Telangana",
+      "region": "Andhra Pradesh · Telangana",
+      "accent": "#B91C1C",
+      "signature": "Gongura · Gutti vankaya · Pulihora",
+      "blurb": "Fiery pickles, tangy pulusus and the festive Ugadi and Sankranti spreads.",
+      "dishes": [
+        {
+          "id": "an-punugulu",
+          "name": "Punugulu",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-mirchibajji",
+          "name": "Mirchi bajji",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-kodivepudu",
+          "name": "Kodi vepudu",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-royyala",
+          "name": "Royyala vepudu",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-guttivankaya",
+          "name": "Gutti vankaya",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-tomatopappu",
+          "name": "Tomato pappu",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-palakurapappu",
+          "name": "Palakura pappu",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-pulusu",
+          "name": "Mukkala pulusu",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "an-majjigapulusu",
+          "name": "Majjiga pulusu",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-bendakaya",
+          "name": "Bendakaya fry",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-gonguramutton",
+          "name": "Gongura mutton",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-natukodi",
+          "name": "Natu kodi kura",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-chepala",
+          "name": "Chepala pulusu",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-pulihora",
+          "name": "Pulihora",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-rice",
+          "name": "Steamed rice with ghee",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-jonnarotte",
+          "name": "Jonna rotte",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-pesarattu",
+          "name": "Pesarattu",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-charu",
+          "name": "Charu",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-gongurapachadi",
+          "name": "Gongura pachadi",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-avakaya",
+          "name": "Avakaya",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-appadam",
+          "name": "Appadam",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-bobbatlu",
+          "name": "Bobbatlu",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-ariselu",
+          "name": "Ariselu",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-semiya",
+          "name": "Semiya payasam",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "an-sunnundalu",
+          "name": "Sunnundalu",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    },
+    {
+      "id": "hyderabadi",
+      "name": "Hyderabadi",
+      "region": "Telangana",
+      "accent": "#6D28D9",
+      "signature": "Dum biryani · Mirchi ka salan · Double ka meetha",
+      "blurb": "Deccani dawat cooking: slow dum biryani, rich salans and Eid sweets.",
+      "dishes": [
+        {
+          "id": "hy-shikampuri",
+          "name": "Shikampuri kebab",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-lukhmi",
+          "name": "Lukhmi",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-patharkagosht",
+          "name": "Pathar ka gosht",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-pakoda",
+          "name": "Onion pakoda",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": true
+        },
+        {
+          "id": "hy-mirchisalan",
+          "name": "Mirchi ka salan",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": false
+        },
+        {
+          "id": "hy-bagarabaingan",
+          "name": "Bagara baingan",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": false
+        },
+        {
+          "id": "hy-khattidal",
+          "name": "Khatti dal",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-tamatarkut",
+          "name": "Tamatar ka kut",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-dalcha",
+          "name": "Mutton dalcha",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-haleem",
+          "name": "Haleem",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-korma",
+          "name": "Mutton korma",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-muttonbiryani",
+          "name": "Mutton dum biryani",
+          "course": "R",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-chickenbiryani",
+          "name": "Chicken dum biryani",
+          "course": "R",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-vegbiryani",
+          "name": "Veg dum biryani",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": true
+        },
+        {
+          "id": "hy-bagararice",
+          "name": "Bagara rice",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": false
+        },
+        {
+          "id": "hy-sheermal",
+          "name": "Sheermal",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-rumali",
+          "name": "Rumali roti",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-raita",
+          "name": "Dahi ki chutney",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-burani",
+          "name": "Burani raita",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": false
+        },
+        {
+          "id": "hy-salad",
+          "name": "Onion-cucumber salad",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": true
+        },
+        {
+          "id": "hy-doublekameetha",
+          "name": "Double ka meetha",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-qubani",
+          "name": "Qubani ka meetha",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-sheerkhurma",
+          "name": "Sheer khurma",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "hy-phirni",
+          "name": "Phirni",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    },
+    {
+      "id": "bengali",
+      "name": "Bengali",
+      "region": "West Bengal",
+      "accent": "#BE123C",
+      "signature": "Bhoger khichuri · Shorshe ilish · Payesh",
+      "blurb": "Puja bhog, mustard-laced fish and the patient art of Bengali sweets.",
+      "dishes": [
+        {
+          "id": "bn-beguni",
+          "name": "Beguni",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-fishfry",
+          "name": "Kolkata fish fry",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-mochar",
+          "name": "Mochar chop",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "bn-begunbhaja",
+          "name": "Begun bhaja",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-shukto",
+          "name": "Shukto",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "bn-labra",
+          "name": "Labra",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "bn-cholardal",
+          "name": "Cholar dal",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-alooposto",
+          "name": "Aloo posto",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "bn-dhoka",
+          "name": "Dhokar dalna",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "bn-chhana",
+          "name": "Chhanar dalna",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "bn-potol",
+          "name": "Potoler dorma",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-ilish",
+          "name": "Shorshe ilish",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-chingri",
+          "name": "Chingri malai curry",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-kosha",
+          "name": "Kosha mangsho",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-khichuri",
+          "name": "Bhoger khichuri",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-basanti",
+          "name": "Basanti pulao",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-luchi",
+          "name": "Luchi",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-rice",
+          "name": "Gobindobhog rice",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-chutney",
+          "name": "Tomato-khejur chutney",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-papad",
+          "name": "Papad",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-payesh",
+          "name": "Payesh",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-rosogolla",
+          "name": "Rosogolla",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-sandesh",
+          "name": "Sandesh",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-mishtidoi",
+          "name": "Mishti doi",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "bn-malpua",
+          "name": "Malpua",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    },
+    {
+      "id": "gujarati",
+      "name": "Gujarati",
+      "region": "Gujarat",
+      "accent": "#CA8A04",
+      "signature": "Dhokla · Undhiyu · Shrikhand",
+      "blurb": "The sweet-sour-spicy balance, farsan platters and the full Kathiyawadi thali.",
+      "dishes": [
+        {
+          "id": "gj-dhokla",
+          "name": "Khaman dhokla",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-khandvi",
+          "name": "Khandvi",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-patra",
+          "name": "Patra",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-handvo",
+          "name": "Handvo",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-muthiya",
+          "name": "Methi muthiya",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-undhiyu",
+          "name": "Undhiyu",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "gj-kadhi",
+          "name": "Gujarati kadhi",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-dal",
+          "name": "Gujarati dal",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-sevtameta",
+          "name": "Sev tameta nu shaak",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-ringan",
+          "name": "Ringan no olo",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-bhinda",
+          "name": "Bhinda nu shaak",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-batata",
+          "name": "Batata nu shaak",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "gj-rotli",
+          "name": "Phulka rotli",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-puri",
+          "name": "Puri",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-thepla",
+          "name": "Methi thepla",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-khichdi",
+          "name": "Vaghareli khichdi",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-rice",
+          "name": "Jeera rice",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-rotla",
+          "name": "Bajra rotla",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-chhundo",
+          "name": "Chhundo",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-kachumber",
+          "name": "Kachumber",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": false
+        },
+        {
+          "id": "gj-papad",
+          "name": "Papad",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-chaas",
+          "name": "Chaas",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-shrikhand",
+          "name": "Shrikhand",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-basundi",
+          "name": "Basundi",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-mohanthal",
+          "name": "Mohanthal",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-sukhdi",
+          "name": "Sukhdi",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "gj-aamras",
+          "name": "Aamras (seasonal)",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    },
+    {
+      "id": "rajasthani",
+      "name": "Rajasthani & Marwari",
+      "region": "Rajasthan",
+      "accent": "#C2410C",
+      "signature": "Dal baati churma · Gatte · Ker sangri",
+      "blurb": "Desert-kitchen cooking built on ghee, gram flour and sun-dried beans, made for big family feasts.",
+      "dishes": [
+        {
+          "id": "rj-pyazkachori",
+          "name": "Pyaaz kachori",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": true
+        },
+        {
+          "id": "rj-mirchivada",
+          "name": "Mirchi vada",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "rj-dalkachori",
+          "name": "Dal kachori",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-dal",
+          "name": "Panchmel dal",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-gatte",
+          "name": "Gatte ki sabzi",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-kersangri",
+          "name": "Ker sangri",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-papadsabzi",
+          "name": "Papad ki sabzi",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-kadhi",
+          "name": "Rajasthani kadhi",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-laalmaas",
+          "name": "Laal maas",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-safedmaas",
+          "name": "Safed maas",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-baati",
+          "name": "Baati",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-bajraroti",
+          "name": "Bajra roti",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-missiroti",
+          "name": "Missi roti",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-puri",
+          "name": "Puri",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-khichdi",
+          "name": "Bajra khichdi",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-lehsunchutney",
+          "name": "Lehsun ki chutney",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": false
+        },
+        {
+          "id": "rj-raita",
+          "name": "Boondi raita",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-papad",
+          "name": "Roasted papad",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-churma",
+          "name": "Churma",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-ghevar",
+          "name": "Ghevar",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-moongdalhalwa",
+          "name": "Moong dal halwa",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-malpua",
+          "name": "Malpua",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "rj-mawakachori",
+          "name": "Mawa kachori",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    },
+    {
+      "id": "maharashtrian",
+      "name": "Maharashtrian",
+      "region": "Maharashtra",
+      "accent": "#A16207",
+      "signature": "Puran poli · Modak · Varan bhaat",
+      "blurb": "Ganeshotsav naivedya, Konkan coconut curries and Kolhapuri heat.",
+      "dishes": [
+        {
+          "id": "mh-kothimbir",
+          "name": "Kothimbir vadi",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-sabudana",
+          "name": "Sabudana vada",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "mh-batatavada",
+          "name": "Batata vada",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "mh-surmai",
+          "name": "Surmai fry",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-varan",
+          "name": "Varan (dal with ghee)",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-amti",
+          "name": "Katachi amti",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-bharlivangi",
+          "name": "Bharli vangi",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-usal",
+          "name": "Matki usal",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-pitla",
+          "name": "Pitla",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-batatabhaji",
+          "name": "Batatyachi bhaji",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "mh-tambda",
+          "name": "Kolhapuri tambda rassa",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-kolhapurichicken",
+          "name": "Kolhapuri chicken",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-malvanifish",
+          "name": "Malvani fish curry",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-masalebhaat",
+          "name": "Masale bhaat",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-rice",
+          "name": "Steamed rice",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-poli",
+          "name": "Poli (chapati)",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-bhakri",
+          "name": "Jowar bhakri",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-puri",
+          "name": "Puri",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-koshimbir",
+          "name": "Koshimbir",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-thecha",
+          "name": "Hirvi mirchi thecha",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": false
+        },
+        {
+          "id": "mh-papad",
+          "name": "Papad",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-solkadhi",
+          "name": "Solkadhi",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-modak",
+          "name": "Ukadiche modak",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-puranpoli",
+          "name": "Puran poli",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-shrikhand",
+          "name": "Shrikhand",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-basundi",
+          "name": "Basundi",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "mh-sheera",
+          "name": "Sheera",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    },
+    {
+      "id": "punjabi",
+      "name": "Punjabi",
+      "region": "Punjab",
+      "accent": "#15803D",
+      "signature": "Sarson da saag · Dal makhani · Chole",
+      "blurb": "Generous, ghee-rich home cooking, from Lohri saag to Diwali dinners.",
+      "dishes": [
+        {
+          "id": "pb-paneertikka",
+          "name": "Paneer tikka",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-amritsarifish",
+          "name": "Amritsari fish",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-chickentikka",
+          "name": "Chicken tikka",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-samosa",
+          "name": "Samosa",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "pb-pakode",
+          "name": "Mix pakode",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": true
+        },
+        {
+          "id": "pb-saag",
+          "name": "Sarson da saag",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-dalmakhani",
+          "name": "Dal makhani",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-chole",
+          "name": "Pindi chole",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-rajma",
+          "name": "Rajma",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-kadhi",
+          "name": "Kadhi pakora",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-shahipaneer",
+          "name": "Shahi paneer",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-aloogobi",
+          "name": "Aloo gobi",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "pb-butterchicken",
+          "name": "Butter chicken",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-mutton",
+          "name": "Punjabi mutton curry",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-makki",
+          "name": "Makki di roti",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-lachha",
+          "name": "Lachha paratha",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-bhature",
+          "name": "Bhature",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-jeera",
+          "name": "Jeera rice",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-pulao",
+          "name": "Matar pulao",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-raita",
+          "name": "Boondi raita",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-salad",
+          "name": "Onion-cucumber salad",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": true,
+          "root": true
+        },
+        {
+          "id": "pb-achaar",
+          "name": "Achaar",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-lassi",
+          "name": "Lassi",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-gajarhalwa",
+          "name": "Gajar ka halwa",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "pb-kheer",
+          "name": "Kheer",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-pinni",
+          "name": "Pinni",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-gulabjamun",
+          "name": "Gulab jamun",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "pb-phirni",
+          "name": "Phirni",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    },
+    {
+      "id": "kashmiri",
+      "name": "Kashmiri",
+      "region": "Kashmir",
+      "accent": "#9F1239",
+      "signature": "Rogan josh · Nadru yakhni · Kahwa",
+      "blurb": "Wazwan courses and Kashmiri Pandit kitchens: fennel, dry ginger and slow-cooked yoghurt gravies.",
+      "dishes": [
+        {
+          "id": "ks-tabakmaaz",
+          "name": "Tabak maaz",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-nadrumonje",
+          "name": "Nadru monje",
+          "course": "S",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "ks-seekh",
+          "name": "Kashmiri seekh kebab",
+          "course": "S",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-roganjosh",
+          "name": "Rogan josh",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-yakhni",
+          "name": "Mutton yakhni",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-gushtaba",
+          "name": "Gushtaba",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-rista",
+          "name": "Rista",
+          "course": "M",
+          "nonveg": true,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-dumaloo",
+          "name": "Kashmiri dum aloo",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "ks-nadruyakhni",
+          "name": "Nadru yakhni",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "ks-haak",
+          "name": "Haak",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-rajma",
+          "name": "Kashmiri rajma",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-chaman",
+          "name": "Chaman kaliya",
+          "course": "M",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-rice",
+          "name": "Steamed rice",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-modur",
+          "name": "Modur pulav",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-pulao",
+          "name": "Kashmiri pulao",
+          "course": "R",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-walnut",
+          "name": "Walnut chutney",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-mooli",
+          "name": "Radish chutney",
+          "course": "A",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": true
+        },
+        {
+          "id": "ks-phirni",
+          "name": "Phirni",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-shufta",
+          "name": "Shufta",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        },
+        {
+          "id": "ks-kahwa",
+          "name": "Kahwa (saffron tea)",
+          "course": "D",
+          "nonveg": false,
+          "onionGarlic": false,
+          "root": false
+        }
+      ]
+    }
+  ]
+}
